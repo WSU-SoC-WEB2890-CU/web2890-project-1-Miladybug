@@ -1,3 +1,123 @@
+$dark-orange: #bb6808;
+$yellow: #f1ba18;
+$pale-yellow: #f8dd6c;
+$dull-green: #7d7846;
+$pale-blue: #e8eaed;
+$brown: #704926;
+$cream: #fef4dc;
+
+$primary: $yellow;
+$secondary: $dark-orange;
+$warning: $brown;
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) saturate(100%) invert(37%) sepia(92%) saturate(641%) hue-rotate(358deg) brightness(99%) contrast(96%);
+}
+
+.bi-star,
+.bi-star-fill,
+.bi-star-half {
+    filter: brightness(0) saturate(100%) invert(37%) sepia(92%) saturate(641%) hue-rotate(358deg) brightness(99%) contrast(96%);
+}
+
 /* Your styles go here */
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+html{
+    box-sizing: border-box;
+    font-family: "Scheherazade New", serif;
+    font-size: 16px;
+}
+
+*, ::before, ::after{
+    box-sizing: inherit;
+}
+
+main{
+    margin: 0;
+    padding: 0;
+    padding-top: 6.4rem;
+    background-color: $cream;
+}
+
+#hero {
+    background-image: url("../images/pexels/parking_lot.jpg");
+    background-size: cover;
+
+    h1 {
+        font-family: "Racing Sans One", serif;
+        font-size: 5rem;
+        font-weight: bold;
+    }
+    p {
+        font-size: 2rem;
+        
+        em {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+    }
+}
+
+h2 {
+    font-family: "Ranga";
+    font-size: 3rem;
+    color: $primary;
+    text-align: center;
+}
+
+section {
+    font-family: "Scheherazade New", serif;
+    font-size: 20px;
+}
+
+.list-group-item {
+    background-color: $pale-blue;
+    border-color: $dark-orange;
+    border-width: 3px;
+}
+
+.carousel-item {
+    background-color: $pale-blue;
+    border: 2px solid $dark-orange;
+    border-radius: 1rem;
+    padding: 1rem 4rem;
+    text-align: center;
+}
+
+#myCarousel {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#main-selling-point {
+    background-image: url("../images/pexels/headlights.jpg");
+    background-size: cover;
+    color: white;
+    padding: 3rem;
+}
+
+.accordion-button {
+    font-size: 1.5rem;
+}
+
+.card {
+    justify-content: space-around;
+
+    @include media-breakpoint-only(md) {
+        width: 47%;
+    }
+
+    @include media-breakpoint-up(lg) {
+        width: 30%;
+    }
+    
+    // margin: 1rem;
+
+    h5 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
